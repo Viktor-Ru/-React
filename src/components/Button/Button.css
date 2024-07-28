@@ -21,6 +21,7 @@
   border: solid 5px tomato;
 }
 
-.button:active {
-  opacity: 0.5;
+.button--active {
+  background-image: none;
+  background-color: aqua;
 }

@@ -23,11 +23,13 @@ function Content() {
       <section>
         <h2>Как начать работу</h2>
         <ol>
-          <CreateLi title={startInfo[0].title} description={startInfo[0].description} />
+          {startInfo.map((item) => (<CreateLi key={item.title} {...item} />))}
+
+          {/* <CreateLi title={startInfo[0].title} description={startInfo[0].description} />
           <CreateLi {...startInfo[1]} />
           <CreateLi {...startInfo[2]} />
           <CreateLi {...startInfo[3]} />
-          <CreateLi {...startInfo[4]} />
+          <CreateLi {...startInfo[4]} /> */}
         </ol>
       </section>
 
@@ -36,9 +38,9 @@ function Content() {
           {content}
         </p>
 
-        <Button click={() => handleClick('1')}>Кнопка 1</Button>
-        <Button click={() => handleClick('2')}>Кнопка 2</Button>
-        <Button click={() => handleClick('3')}>Кнопка 3</Button>
+        <Button click={() => handleClick('1')} isActive={content === '1'}>Кнопка 1</Button>
+        <Button click={() => handleClick('2')} isActive={content === '2'}>Кнопка 2</Button>
+        <Button click={() => handleClick('3')} isActive={content === '3'}>Кнопка 3</Button>
       </section>
 
     </main>

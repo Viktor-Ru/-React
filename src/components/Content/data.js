@@ -23,4 +23,9 @@ export const startInfo = [
     title: 'Заголовок 2',
     description: 'Описание 2',
   },
+
+  {
+    title: 'Заголовок 3',
+    description: 'Описание 3',
+  },
 ]
